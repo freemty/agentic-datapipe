@@ -1,0 +1,5 @@
+- [Agentic Data Pipeline Survey](project_agentic-datapipe-survey.md) -- Comprehensive survey of 25+ papers and 6 tools across agentic data pipelines (2026-04-15)
+- [Embodied AI Data Pipeline Survey](survey_embodied_ai_pipelines.md) -- Robotics FM data pipelines (April 2026): VLA models, OXE standard, video-to-action, collection hardware, VLM annotation, simulation
+- [Image/Video Gen Data Pipeline Survey](survey_image_video_gen_pipelines.md) -- Image/video generation data pipelines (April 2026): LAION-5B, DataComp, DFN, video captioning, filtering, Open-Sora tools
+- [World Model Data Pipeline Survey](survey_world_model_pipelines.md) -- 39 papers on world models, WAMs, latent actions, agentic collection (April 2026): VQ fails on diverse video, VLAW flywheel, PlayWorld self-play
+- [LLM Data Pipeline Survey](project_llm_data_pipeline_survey.md) -- 33+ papers on LLM/VLM data pipelines (April 2026): DCLM, FineWeb2, DoReMi, BeyondWeb synthetic, token-level filtering frontier
