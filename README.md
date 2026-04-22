@@ -1,65 +1,65 @@
 # agentic-datapipe
 
-Agentic data pipeline for video/world model training data — applying autonomous, evolutionary curation strategies to build high-quality datasets for controllable video generation.
+面向视频/世界模型训练数据的自主进化式数据管线 —— 将进化策略搜索应用于可控视频生成的数据构建。
 
-## Problem
+## 问题
 
-Training controllable video generation models (LTX, LingBot-World, Matrix-Game class) requires action-conditioned video data that is:
-- Precisely annotated with camera trajectories and control signals
-- Filtered for visual quality, temporal consistency, and control signal clarity
-- Categorized by content type, motion mode, and control type
+训练可控视频生成模型（LTX、LingBot-World、Matrix-Game 等）需要高质量的 action-conditioned 视频数据：
+- 精确标注相机轨迹和控制信号
+- 经过视觉质量、时序一致性、控制信号清晰度的多维过滤
+- 按内容类型、运动模式、控制类型进行分类
 
-Current data pipelines are hand-designed, one-shot processes. No existing tool combines large-scale internet video with precise action annotation, general-domain coverage, and iterative quality refinement.
+当前的数据管线是人工设计的一次性流程。没有任何现有工具能同时实现：大规模互联网视频 + 精确动作标注 + 通用域覆盖 + 迭代质量精炼。
 
-## Approach
+## 方法
 
-Extend [DataEvolve](https://arxiv.org/abs/2603.14420)-style evolutionary strategy design to video data curation:
+将 [DataEvolve](https://arxiv.org/abs/2603.14420) 的进化策略设计扩展到视频数据 curation：
 
 ```
-Observe data → Design strategy → Execute curation → Evaluate fitness → Refine
-     ↑                                                                    |
-     └────────────────────────────────────────────────────────────────────┘
+观察数据 → 设计策略 → 执行 curation → 评估 fitness → 精炼策略
+   ↑                                                      |
+   └──────────────────────────────────────────────────────┘
 ```
 
-Key design axes:
-1. **Category definition** — partition video by motion mode x control signal type
-2. **Strategy space** — temporal segmentation, quality filtering, captioning strategy, control signal extraction/filtering
-3. **Fitness approximation** — hybrid VLM-as-judge + control accuracy metric + periodic small model probe
-4. **Evolution mechanism** — iterative refinement with cross-generation knowledge transfer
+四个设计轴：
+1. **类别定义** — 按运动模式 x 控制信号类型划分视频
+2. **策略空间** — 时序分割、质量过滤、标注策略、控制信号提取/过滤
+3. **Fitness 近似** — VLM-as-judge + 控制精度指标 + 周期性小模型验证
+4. **进化机制** — 跨代知识积累的迭代精炼
 
-## Project Structure
+## 项目结构
 
 ```
 docs/
-  papers/          # Literature surveys and landscape map
-    landscape.md   # Master literature map (7 sections, 100+ papers)
-  design/          # Design documents
-exp/               # Experiment tracking
-scripts/           # Experiment orchestration
-viewer/            # Results viewer
+  papers/          # 文献调研与 landscape
+    landscape.md   # 文献总图（7 大板块，100+ 论文）
+  design/          # 设计文档
+exp/               # 实验追踪
+scripts/           # 实验编排
+viewer/            # 结果查看器
 ```
 
-## Documentation
+## 文档
 
-| Document | Description |
-|----------|-------------|
-| [Literature Landscape](docs/papers/landscape.md) | Domain literature map covering data curation, world models, video generation pipelines |
-| [Evolutionary Video Curation Design](docs/design/evolutionary-video-curation.md) | Design space: 4 axes, 16 GPU feasibility plan, critical ablations |
-| [Video Pipeline Tools Survey](docs/design/video-pipeline-tools.md) | Survey of 11 open-source tools (Cosmos-Curate, video2dataset, etc.) |
-| [CHANGELOG](CHANGELOG.md) | Version history |
+| 文档 | 说明 |
+|------|------|
+| [文献 Landscape](docs/papers/landscape.md) | 领域文献地图：数据 curation、世界模型、视频生成管线 |
+| [进化式视频 Curation 设计](docs/design/evolutionary-video-curation.md) | Design space：4 个设计轴、16 GPU 可行性方案、关键 ablation |
+| [视频管线工具调研](docs/design/video-pipeline-tools.md) | 11 个开源工具调研（Cosmos-Curate、video2dataset 等） |
+| [CHANGELOG](CHANGELOG.md) | 版本记录 |
 
-## Key References
+## 关键参考
 
-- [DataEvolve](https://arxiv.org/abs/2603.14420) — Autonomous evolutionary strategy design for data curation
-- [LingBot-World](https://arxiv.org/abs/2601.20540) — 3-source data engine + 3-layer hierarchical captioning
-- [Matrix-Game 2.0](https://arxiv.org/abs/2508.13009) — Most precise action annotation pipeline (ms-level sync)
-- [HY-GameCraft-2](https://arxiv.org/abs/2511.23429) — Dual captioning (standard + interaction-diff)
-- [Yume](https://arxiv.org/abs/2507.17744) — QCM camera quantization; fully open data/code/weights
-- [Cosmos WFM](https://arxiv.org/abs/2501.03575) — Largest scale pipeline (20M hrs raw video)
+- [DataEvolve](https://arxiv.org/abs/2603.14420) — 自主进化策略设计，用于数据 curation
+- [LingBot-World](https://arxiv.org/abs/2601.20540) — 三源数据引擎 + 三层分级标注
+- [Matrix-Game 2.0](https://arxiv.org/abs/2508.13009) — 最精确的动作标注管线（毫秒级同步）
+- [HY-GameCraft-2](https://arxiv.org/abs/2511.23429) — 双标注策略（标准描述 + 交互差异描述）
+- [Yume](https://arxiv.org/abs/2507.17744) — QCM 相机量化；数据/代码/权重全开源
+- [Cosmos WFM](https://arxiv.org/abs/2501.03575) — 最大规模管线（2000 万小时原始视频）
 
-## Status
+## 状态
 
-Early research phase. Literature survey and design space exploration complete. No experiments yet.
+早期研究阶段。文献调研和 design space 探索已完成，尚未启动实验。
 
 ## License
 
