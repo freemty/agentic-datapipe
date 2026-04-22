@@ -98,4 +98,5 @@ Pipeline state tracked in .pipeline-state.json.
 | docs/papers/data-pipelines-survey.md | Image/video generation data pipeline survey |
 | docs/papers/world-model-data-pipeline-survey.md | World model & action data pipeline survey |
 | docs/papers/embodied-ai-data-pipelines-survey.md | Embodied AI & robotics data pipeline survey |
+| docs/papers/interactive-world-models-survey.md | Interactive world model technical reports & data pipelines (2024-2026) |
 | exp/summary.md | Cross-experiment flight recorder |

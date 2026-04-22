@@ -95,7 +95,7 @@
 
 ## 6. World Models, World Action Models, and Action-Conditioned Data Pipelines
 
-*Full survey: [world-model-data-pipeline-survey.md](./world-model-data-pipeline-survey.md)*
+*Full survey: [world-model-data-pipeline-survey.md](./world-model-data-pipeline-survey.md)* | *Interactive world model reports: [interactive-world-models-survey.md](./interactive-world-models-survey.md)*
 
 ### 6-WM. World Models (Game Domain)
 
@@ -103,7 +103,14 @@
 |-------|------|-------|---------------|-------------|-------------|
 | [GameNGen](https://arxiv.org/abs/2408.14837) | 2024 | Preprint | RL agent auto-play (900M frames) | Game controls | Real-time DOOM |
 | [DIAMOND](https://arxiv.org/abs/2405.12399) | 2024 | NeurIPS Spotlight | Atari replay buffers | Discrete game actions | SOTA Atari WM |
+| [GameGen-X](https://arxiv.org/abs/2411.00769) | 2024 | Preprint | 150+ game recordings (1M+ clips); GPT-4o captioning; InstructNet for multi-modal control | Keyboard + mouse + semantic instruction | First open-world game video gen |
+| [Cosmos WFM](https://arxiv.org/abs/2501.03575) | 2025 | Preprint (NVIDIA) | 20M hrs raw video → 5-stage pipeline (TransNetV2 split → multi-stage filter → VLM caption → semantic dedup → sharding) → 100M clips | Camera pose (post-train); robot actions | Foundation WM platform; up to 4K |
+| [Matrix-Game v1](https://arxiv.org/abs/2506.18701) | 2025 | Preprint | Minecraft 3700hrs (2700 unlabeled + 1000 labeled); frame-level keyboard+mouse | Frame-level keyboard + mouse | 17B params; GameWorld Score benchmark |
+| [Matrix-Game 2.0](https://arxiv.org/abs/2508.13009) | 2025 | Preprint | UE NavMesh + GTA5 ScriptHook + PPO agents; ~1200hrs produced; ms-precision action sync; >99% accuracy | Frame-level keyboard + mouse (ms) | 25FPS real-time; open weights+code |
+| [Yume](https://arxiv.org/abs/2507.17744) | 2025 | Preprint | Sekai dataset: 11K hrs YouTube → 400hrs HQ; MegaSAM camera; QCM quantization → discrete keyboard actions | Quantized camera motion as text | 1080p; fully open (data+code+weights) |
+| [HY-GameCraft-2](https://arxiv.org/abs/2511.23429) | 2025 | Preprint (Tencent) | 150+ AAA games; dual captioning (standard + interaction-diff); 150K synthetic via VLM+image-edit; VIPE 6DoF camera | Text instruction + keyboard + mouse | 14B MoE; 16FPS; most innovative caption |
 | [Solaris](https://arxiv.org/abs/2602.22208) | 2026 | Preprint | Automated multi-agent collection (12.64M frames) | Minecraft controls | First multiplayer WM |
+| [LingBot-World](https://arxiv.org/abs/2601.20540) | 2026 | Preprint | 3-source (internet video + game platform + UE synthetic); 3-level profiling; 3-layer hierarchical captioning (narrative + scene-static + dense temporal JSON) | Plücker 6DoF + WASD multi-hot | 28B MoE; 16FPS; emergent memory 60s+ |
 | [COMBAT](https://arxiv.org/abs/2603.00825) | 2026 | Preprint | Single-player inputs only | Partial action labels | Emergent opponent behavior |
 | [Infinite-World](https://arxiv.org/abs/2602.02393) | 2026 | Preprint | Uncertainty-aware action labeling | Tri-state discrete | 1000+ frame consistency |
 | [Matrix-Game 3.0](https://arxiv.org/abs/2604.08995) | 2026 | Preprint | Industrial data engine (UE5 + AAA + real) | Pose-Action-Prompt quad | 720p@40FPS real-time |
