@@ -57,6 +57,53 @@ viewer/            # 结果查看器
 - [Yume](https://arxiv.org/abs/2507.17744) — QCM 相机量化；数据/代码/权重全开源
 - [Cosmos WFM](https://arxiv.org/abs/2501.03575) — 最大规模管线（2000 万小时原始视频）
 
+## 开发环境
+
+本项目使用 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 作为主要开发工具，配合以下插件和 skills。
+
+### Claude Code 插件
+
+通过 `/install-plugin` 安装（project scope）：
+
+| 插件 | Registry | 说明 |
+|------|----------|------|
+| [labmate](https://github.com/freemty/labmate) | `labmate-marketplace` | 研究实验管理框架：实验编排、分析、文献阅读、slides 生成 |
+| [superpowers](https://github.com/anthropics/claude-plugins-official) | `claude-plugins-official` | Skills 系统增强：brainstorming、code review、debugging 等 |
+
+### 自定义 Skills（yuanbo-skills）
+
+```bash
+git clone git@github.com:freemty/yuanbo-skills.git ~/code/projects/yuanbo-skills
+```
+
+创建 symlink 到 `~/.claude/skills/`：
+
+```bash
+# 核心 skills
+ln -s ~/code/projects/yuanbo-skills/skills/web-fetcher ~/.claude/skills/web-fetcher
+ln -s ~/code/projects/yuanbo-skills/skills/paper-storyteller ~/.claude/skills/paper-storyteller
+ln -s ~/code/projects/yuanbo-skills/skills/paper-style ~/.claude/skills/paper-style
+ln -s ~/code/projects/yuanbo-skills/skills/weekly-report ~/.claude/skills/weekly-report
+ln -s ~/code/projects/yuanbo-skills/skills/cc-navigator ~/.claude/skills/cc-navigator
+ln -s ~/code/projects/yuanbo-skills/skills/beamer-style ~/.claude/skills/beamer-style
+
+# plugins (作为 skills 安装)
+ln -s ~/code/projects/yuanbo-skills/plugins/paper-review ~/.claude/skills/paper-review
+ln -s ~/code/projects/yuanbo-skills/plugins/unbox-skills/unbox ~/.claude/skills/unbox
+ln -s ~/code/projects/yuanbo-skills/plugins/unbox-skills/unbox-graph ~/.claude/skills/unbox-graph
+ln -s ~/code/projects/yuanbo-skills/plugins/unbox-skills/unbox-to-wiki ~/.claude/skills/unbox-to-wiki
+```
+
+### 关键能力
+
+| 功能 | 来源 | 用法 |
+|------|------|------|
+| 实验管理 | labmate | `/labmate:new-experiment`, `/labmate:analyze-experiment` |
+| 文献深读 | labmate | `/labmate:read-paper <url>` |
+| 网页抓取 | yuanbo-skills/web-fetcher | 自动路由：arXiv、YouTube、GitHub 等 |
+| 论文写作辅助 | yuanbo-skills/paper-style | 学术写作风格检查 |
+| 周报生成 | yuanbo-skills/weekly-report | 自动汇总周进展 |
+
 ## 状态
 
 早期研究阶段。文献调研和 design space 探索已完成，尚未启动实验。
