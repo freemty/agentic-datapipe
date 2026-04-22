@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.1.1 — 2026-04-22
+
+### 变更
+- landscape.md: 新增 DataEvolve (arXiv:2603.14420) 至 §1 Data Curation 和 §3 Agentic Pipeline Systems
+- agentic-datapipe-survey.md: 新增 DataEvolve 条目至 §3 + 更新 section summary
+
+### 其他
+- 深读 LingBot-World (arXiv:2601.20540)，分析其三源数据引擎与三层标注体系对本项目的借鉴价值
+- 讨论 DataEvolve evolutionary curation 迁移到可控视频生成的 design space（category 定义、strategy space、fitness approximation、16 GPU 约束下的实验路线）
+
 ## v0.1.0 — 2026-04-15
 
 ### 新增

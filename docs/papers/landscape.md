@@ -26,6 +26,7 @@
 | [Dataset Fingerprints](https://arxiv.org/abs/2412.02857) | 2024 | NeurIPS 2025 | Filtering leaves fingerprints in models | Pipeline effect analysis |
 | [Mix, MinHash, Match](https://arxiv.org/abs/2512.18834) | 2025 | Preprint | Cross-source agreement as quality signal | Novel quality signal |
 | [Multilingual Quality](https://arxiv.org/abs/2505.22232) | 2025 | Preprint | Cross-lingual quality judges | Multilingual pipeline ref |
+| [DataEvolve](https://arxiv.org/abs/2603.14420) | 2026 | Preprint | Autonomous evolutionary strategy design; beats DCLM/FineWeb-Edu on 18 benchmarks; cleaning > transformation | **Core reference** -- automated strategy discovery (see also §3) |
 
 ## 1b. Data Mixing & Selection
 
@@ -68,6 +69,7 @@
 | [ADMA Copilot](https://arxiv.org/abs/2411.00188) | 2024 | Preprint | Multi-agent data management; meta-program graph | Agent orchestration pattern |
 | [Materials DB Agents](https://arxiv.org/abs/2602.03069) | 2026 | Preprint | Skill-based agent for PDF extraction; cross-modal verification | Domain-specific extraction at scale |
 | [Material Property Extraction](https://arxiv.org/abs/2510.01235) | 2025 | Published | Multi-agent extraction from 10K papers | Multi-agent extraction architecture |
+| [DataEvolve / Data Darwinism II](https://arxiv.org/abs/2603.14420) | 2026 | Preprint | Evolutionary loop for autonomous data curation strategy discovery; 4-agent system (observer→designer→cleaner→judge) with experience pool + strategy pool; 30 generations per category on 672B tokens → Darwin-CC 504B tokens; 3B model beats DCLM/FineWeb-Edu/Ultra-FineWeb; discovers cleaning > transformation | **Key reference** -- evolutionary strategy optimization for data pipeline; extend to video/multi-modal |
 
 ## 4. Open-Source Tools
 
