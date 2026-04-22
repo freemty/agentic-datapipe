@@ -99,4 +99,6 @@ Pipeline state tracked in .pipeline-state.json.
 | docs/papers/world-model-data-pipeline-survey.md | World model & action data pipeline survey |
 | docs/papers/embodied-ai-data-pipelines-survey.md | Embodied AI & robotics data pipeline survey |
 | docs/papers/interactive-world-models-survey.md | Interactive world model technical reports & data pipelines (2024-2026) |
+| docs/design/evolutionary-video-curation.md | Design: evolutionary video data curation for controllable generation (16 GPU plan) |
+| docs/design/video-pipeline-tools.md | Survey: open-source video data processing/curation tools (Cosmos-Curate, video2dataset, etc.) |
 | exp/summary.md | Cross-experiment flight recorder |

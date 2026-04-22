@@ -1,14 +1,21 @@
 # Changelog
 
-## v0.1.1 — 2026-04-22
+## v0.2.0 — 2026-04-22
+
+### 新增
+- docs/design/evolutionary-video-curation.md: Design doc — DataEvolve → 可控视频生成的 design space（4 设计轴 + 16 GPU 三阶段计划 + 关键 ablation）
+- docs/design/video-pipeline-tools.md: 开源视频数据处理工具调研（11 个工具，含 Cosmos-Curate, video2dataset, Open-Sora 等）
+- docs/papers/interactive-world-models-survey.md: Interactive world model 技术报告调研（7 篇论文：Cosmos WFM, GameGen-X, Matrix-Game v1/2.0, Yume, HY-GameCraft-2, LingBot-World）
 
 ### 变更
-- landscape.md: 新增 DataEvolve (arXiv:2603.14420) 至 §1 Data Curation 和 §3 Agentic Pipeline Systems
-- agentic-datapipe-survey.md: 新增 DataEvolve 条目至 §3 + 更新 section summary
+- landscape.md §6-WM: 新增 7 个 interactive world model 条目（含数据管线细节）
+- landscape.md §1/§3: 新增 DataEvolve (arXiv:2603.14420)
+- agentic-datapipe-survey.md §3: 新增 DataEvolve 条目 + 更新 summary
 
 ### 其他
-- 深读 LingBot-World (arXiv:2601.20540)，分析其三源数据引擎与三层标注体系对本项目的借鉴价值
-- 讨论 DataEvolve evolutionary curation 迁移到可控视频生成的 design space（category 定义、strategy space、fitness approximation、16 GPU 约束下的实验路线）
+- 深读 LingBot-World (arXiv:2601.20540)：三源数据引擎 + 三层标注体系 + 28B MoE 架构
+- 深读 DataEvolve (arXiv:2603.14420)：进化式策略设计，cleaning > transformation
+- 分析现有工具 gap：无一工具覆盖 camera pose 集成 / action-aware 标注 / evolutionary curation
 
 ## v0.1.0 — 2026-04-15
 
